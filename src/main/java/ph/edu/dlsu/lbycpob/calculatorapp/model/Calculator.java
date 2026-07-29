@@ -87,6 +87,7 @@ public abstract class Calculator {
                 while (!stack.isEmpty()
                         && !stack.peek().equals("(")
                         && !isFunction(stack.peek())
+                        && !stack.peek().equals("^")
                         && precedence(token) <= precedence(stack.peek())) {
 
                     result.append(stack.pop()).append(" ");
