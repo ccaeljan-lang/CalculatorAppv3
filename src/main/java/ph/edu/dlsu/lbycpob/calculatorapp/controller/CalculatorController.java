@@ -475,6 +475,9 @@ public class CalculatorController {
         if (start < input.length()) {
             currentInput.delete(start, currentInput.length());
         }
+
+        waitingForOperand = false;
+        model.setResultDisplayed(false);
     }
 
     /**
