@@ -196,7 +196,7 @@ public class CalculatorView {
     }
 
     private boolean isScientific(String text) {
-        return text.matches("sin|cos|tan|ln|log|!|√");
+        return text.matches("sin|cos|tan|ln|log|!|√|e|eˣ|\\|x\\||SCI");
     }
 
     private boolean isNumber(String text) {
