@@ -478,6 +478,8 @@ public class CalculatorController {
 
         waitingForOperand = false;
         model.setResultDisplayed(false);
+
+        updateDisplay();
     }
 
     /**
