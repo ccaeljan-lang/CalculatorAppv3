@@ -176,6 +176,10 @@ public class CalculatorController {
 
     }
 
+    private void handleEButton() {
+        // Code here
+    }
+
 
     /**
      * Sets up event handlers for all scientific calculator buttons.
