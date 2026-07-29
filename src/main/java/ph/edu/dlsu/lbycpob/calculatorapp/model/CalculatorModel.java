@@ -229,4 +229,26 @@ public class CalculatorModel {
             return String.format("%.10g", result).replaceAll("\\.?0*$", "");
         }
     }
+
+    /**
+     * Get the current state of scientificNotation
+     */
+    public boolean isScientificNotation() {
+        return scientificNotation;
+    }
+
+    /**
+     * Sets the value of scientificNotation
+     * @param scientificNotation
+     */
+    public void setScientificNotation(boolean scientificNotation) {
+        this.scientificNotation = scientificNotation;
+    }
+
+    /**
+     * To undo scientific notation
+     */
+    public void toggleScientificNotation() {
+        scientificNotation = !scientificNotation;
+    }
 }
