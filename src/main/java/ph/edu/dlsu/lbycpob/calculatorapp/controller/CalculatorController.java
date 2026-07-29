@@ -311,6 +311,23 @@ public class CalculatorController {
     }
 
     /**
+     * Handles formatting the number into scientific notation
+     * by turning the value into double.
+     * Works on a single number and changes th formatting.
+     */
+    private void handleScientificNotation() {
+        model.toggleScientificNotation();
+
+        if (model.isResultDisplayed()) {
+            double result = model.getCurrentValue();
+            String resultText = model.formatResult(result);
+
+            view.updateDisplay(resultText);
+            model.setDisplayText(resultText);
+        }
+    }
+
+    /**
      * Handles the negative toggle button (+/-) - toggles the sign of the current number.
      * <p>
      * This method can work in several scenarios:
