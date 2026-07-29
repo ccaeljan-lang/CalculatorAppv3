@@ -214,6 +214,16 @@ public class CalculatorModel {
             return Double.toString(result);
         }
 
+        if (scientificNotation) {
+            return String.format("%.10e", result)
+                    .replaceAll("\\.?0*e", "e")
+                    .replaceAll("e([+-])0+(\\d)", "e$1$2");
+        }
+
+        if (!Double.isFinite(result)) {
+            return Double.toString(result);
+        }
+
         // Force scientific notation for very large or very small numbers
         double absResult = Math.abs(result);
         if (absResult >= 1e10 || (absResult > 0 && absResult < 1e-4)) {
