@@ -185,6 +185,10 @@ public class CalculatorController {
         if (waitingForOperand) {
             waitingForOperand = false;
         }
+
+        currentInput.append(Math.E);
+
+        updateDisplay();
     }
 
 
