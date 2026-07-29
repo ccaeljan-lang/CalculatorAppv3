@@ -37,7 +37,8 @@ public class CalculatorView {
     /** Define the layout of buttons as a 2D array (rows and columns) */
     private static final String[][] buttonLayout = new String[][]{
             {"(", ")", "C", "CE"},
-            {"shft", "sin", "cos", "tan"},
+            {"shift", "sin", "cos", "tan"},
+            {"e", "eˣ", "|x|", "SCI"},
             {"π", "!", "√", "%"},
             {"+/-", "ln", "log", "^"},
             {"7", "8", "9", "/"},
