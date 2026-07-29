@@ -24,11 +24,11 @@ public class CalculatorApp extends Application {
         controller.run();
 
         // Setup scene
-        Scene scene = new Scene(view.getRoot(), 400, 700);
+        Scene scene = new Scene(view.getRoot(), 400, 750);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles.css")).toExternalForm());
 
         // Configure stage
-        primaryStage.setTitle("fx-999 EQ PLUS LBYCPOB Calculator");
+        primaryStage.setTitle("fx-999 EQ PLUS LBYCPOB Calculator - Group 7");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false); // Calculator has fixed size
         primaryStage.show();
