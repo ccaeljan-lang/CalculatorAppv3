@@ -322,15 +322,9 @@ public class CalculatorController {
      * Works on a single number and changes th formatting.
      */
     private void handleScientificNotation() {
-        model.toggleScientificNotation();
-
-        if (model.isResultDisplayed()) {
-            double result = model.getCurrentValue();
-            String resultText = model.formatResult(result);
-
-            view.updateDisplay(resultText);
-            model.setDisplayText(resultText);
-        }
+        currentInput.append("*10^");
+        waitingForOperand = true;
+        updateDisplay();
     }
 
     /**
