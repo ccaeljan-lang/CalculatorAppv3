@@ -81,7 +81,16 @@ public abstract class Calculator {
             } else if (isFunction(token)) {
                 stack.push(token);
             } else if (isUnaryOperator(token)) {
-                
+                // Handle unary negation
+                // Do not pop ^ because exponentiation must be evaluated
+                // before unary negation for expressions like -2^2.
+                while (!stack.isEmpty()
+                        && !stack.peek().equals("(")
+                        && !isFunction(stack.peek())
+                        && precedence(token) <= precedence(stack.peek())) {
+
+                    result.append(stack.pop()).append(" ");
+                }
                 stack.push(token);
             } else if (isOperator(token)) {
                 if (token.equals("^")) {
