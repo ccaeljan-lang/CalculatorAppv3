@@ -471,6 +471,10 @@ public class CalculatorController {
             }
         }
         start ++;
+
+        if (start < input.length()) {
+            currentInput.delete(start, currentInput.length());
+        }
     }
 
     /**
