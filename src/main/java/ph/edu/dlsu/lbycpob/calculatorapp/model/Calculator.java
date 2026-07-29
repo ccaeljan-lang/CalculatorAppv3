@@ -138,6 +138,7 @@ public abstract class Calculator {
         expression = expression.replaceAll("\\s+", "");
         // Handle 'mod' keyword by replacing it with '%' for easier processing
         expression = expression.replaceAll("(?i)mod", "%");
+        expression = expression.replaceAll("\\be\\b", String.valueOf(Math.E));
         List<String> tokens = new ArrayList<>();
         StringBuilder current = new StringBuilder();
 

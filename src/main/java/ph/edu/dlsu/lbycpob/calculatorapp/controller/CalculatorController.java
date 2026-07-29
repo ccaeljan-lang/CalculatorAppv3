@@ -198,7 +198,8 @@ public class CalculatorController {
             waitingForOperand = false;
         }
 
-        currentInput.append(Math.E);
+        // Add the letter "e" instead of Math.E
+        currentInput.append("e");
 
         updateDisplay();
     }
