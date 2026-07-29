@@ -438,6 +438,22 @@ public class CalculatorController {
             waitingForOperand = false;
             return;
         }
+
+        String input = currentInput.toString();
+
+        // Finding for the start of the current entry
+        int start = input.length() - 1;
+
+        // Move backwards while the current entry is a number
+        while (start >= 0) {
+            char c = input.charAt(start);
+            if (Character.isDigit(c) || c == '.') {
+                start--;
+            } else {
+                break;
+            }
+        }
+        start ++;
     }
 
     /**
