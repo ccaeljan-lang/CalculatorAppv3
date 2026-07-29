@@ -81,12 +81,7 @@ public abstract class Calculator {
             } else if (isFunction(token)) {
                 stack.push(token);
             } else if (isUnaryOperator(token)) {
-                // Handle unary negation with highest precedence
-                // Push it immediately since it has higher precedence than all operators
-                while (!stack.isEmpty() && !stack.peek().equals("(") &&
-                        precedence(token) <= precedence(stack.peek())) {
-                    result.append(stack.pop()).append(" ");
-                }
+                
                 stack.push(token);
             } else if (isOperator(token)) {
                 if (token.equals("^")) {
