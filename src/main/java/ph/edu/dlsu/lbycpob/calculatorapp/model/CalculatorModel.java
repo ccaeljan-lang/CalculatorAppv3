@@ -42,6 +42,14 @@ public class CalculatorModel {
     public ScientificCalculator calculator;
 
     /**
+     * Since the calculator already has a scientific notation formating,
+     * this boolean toggles if the scientific notation button is pressed or not to format
+     * the display.
+     * Set to private as it is only used in this class.
+     */
+    private boolean scientificNotation;
+
+    /**
      * Constructs a new CalculatorModel with default initial state.
      * Initializes the calculator with a ScientificCalculator implementation,
      * sets current value to 0, display text to "0", and result flag to false.
@@ -54,6 +62,7 @@ public class CalculatorModel {
         this.currentValue = 0.0;           // Start with zero value
         this.displayText = "0";            // Display shows "0" initially
         this.isResultDisplayed = false;    // No result is currently displayed
+        this.scientificNotation = false;   // Button is not pressed initially
     }
 
     // ==================== GETTER METHODS (Encapsulation) ====================
