@@ -138,6 +138,12 @@ public class CalculatorController {
         if (rightParenButton != null) {
             rightParenButton.setOnAction(e -> handleInput(")"));
         }
+
+        // Scientific Button
+        Button sciButton = view.getButton("SCI");
+        if (sciButton != null) {
+            sciButton.setOnAction(e -> handleScientificNotation());
+        }
     }
 
     private void handleShift() {
