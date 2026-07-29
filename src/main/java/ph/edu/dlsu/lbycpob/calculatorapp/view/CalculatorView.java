@@ -130,10 +130,18 @@ public class CalculatorView {
      */
     private void setupLayout() {
         // Add top label
-        Label topLabel = new Label("LBYCPOB - E2x+");
+        Label topLabel = new Label("LBYCPOB - E21 Group 7");
         topLabel.setAlignment(Pos.TOP_RIGHT);
         topLabel.getStyleClass().add("top-label");
         root.getChildren().add(topLabel);
+
+        // Add group member names
+        Label namesLabel = new Label("Cristobal, Paingan, Villaluz");
+        namesLabel.setAlignment(Pos.TOP_LEFT);
+        namesLabel.setMaxWidth(Double.MAX_VALUE);
+        namesLabel.getStyleClass().add("names-label");
+        root.getChildren().add(namesLabel);
+
 
         // Add display
         display.positionCaret(display.getText().length()); // Ensure recent char is shown
