@@ -144,6 +144,18 @@ public class CalculatorController {
         if (sciButton != null) {
             sciButton.setOnAction(e -> handleScientificNotation());
         }
+
+        // Euler Button
+        Button eButton = view.getButton("e");
+        if (eButton != null) {
+            eButton.setOnAction(event -> handleEButton());
+        }
+
+        // e^x (exponential) Button
+        Button expButton = view.getButton("eˣ");
+        if (expButton != null) {
+            expButton.setOnAction(event -> handleScientificOperation("exp"));
+        }
     }
 
     private void handleShift() {
