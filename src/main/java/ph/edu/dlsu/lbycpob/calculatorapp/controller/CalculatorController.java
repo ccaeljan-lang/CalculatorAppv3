@@ -177,7 +177,10 @@ public class CalculatorController {
     }
 
     private void handleEButton() {
-        // Code here
+        if (model.isResultDisplayed()) {
+            currentInput.setLength(0);
+            model.setResultDisplayed(false);
+        }
     }
 
 
