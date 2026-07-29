@@ -156,6 +156,12 @@ public class CalculatorController {
         if (expButton != null) {
             expButton.setOnAction(event -> handleScientificOperation("exp"));
         }
+
+        // Abs (absolute value) button
+        Button absButton = view.getButton("|x|");
+        if (absButton != null) {
+            absButton.setOnAction(e -> handleScientificOperation("abs"));
+        }
     }
 
     private void handleShift() {
