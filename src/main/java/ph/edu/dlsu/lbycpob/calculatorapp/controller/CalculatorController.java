@@ -430,9 +430,14 @@ public class CalculatorController {
      * being typed, not the entire calculation history.
      */
     private void handleClearEntry() {
-        currentInput.setLength(0);
-        view.updateDisplay("0");
-        waitingForOperand = false;
+        // If there is no input, just display 0
+        if (currentInput.isEmpty()) {
+            view.updateDisplay("0");
+            model.setDisplayText("0");
+            model.setResultDisplayed(false);
+            waitingForOperand = false;
+            return;
+        }
     }
 
     /**
