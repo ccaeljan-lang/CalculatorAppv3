@@ -181,6 +181,10 @@ public class CalculatorController {
             currentInput.setLength(0);
             model.setResultDisplayed(false);
         }
+
+        if (waitingForOperand) {
+            waitingForOperand = false;
+        }
     }
 
 
